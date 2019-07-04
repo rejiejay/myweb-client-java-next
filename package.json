@@ -1,14 +1,28 @@
 {
-    "name": "myweb-client-java-next",
-    "version": "1.0.0",
-    "dependencies": {
-        "next": "^8.1.0",
-        "react": "^16.8.6",
-        "react-dom": "^16.8.6"
-    },
-    "scripts": {
-        "dev": "next",
-        "start": "next start",
-        "build": "next build"
-    }
+  "name": "myweb-client-java-nuxt",
+  "version": "1.0.0",
+  "description": "My excellent Nuxt.js project",
+  "author": "rejiejay",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "build": "nuxt build",
+    "start": "cross-env NODE_ENV=production node server/index.js",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "koa": "^2.6.2",
+    "element-ui": "^2.4.11",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.27",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^24.1.0",
+    "jest": "^24.1.0",
+    "vue-jest": "^3.0.3",
+    "nodemon": "^1.18.9"
+  }
 }
