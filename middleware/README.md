@@ -1,6 +1,8 @@
-# MIDDLEWARE
+# MIDDLEWARE 中间件目录
 
 **This directory is not required, you can delete it if you don't want to use it.**
+
+middleware 目录用于存放应用的中间件。
 
 This directory contains your application middleware.
 Middleware let you define custom functions that can be run before rendering either a page or a group of pages.
