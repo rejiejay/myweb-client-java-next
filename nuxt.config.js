@@ -5,19 +5,26 @@
  * 文档： https://zh.nuxtjs.org/guide/configuration
  */
 module.exports = {
-    mode: 'universal',
+    mode: 'spa',
+
     /*
     ** Headers of the page
     */
     head: {
-        title: process.env.npm_package_name || '',
+        title: '曾杰杰-Rejiejay Web站',
+        htmlAttrs: {
+            lang: 'zh',
+        },
         meta: [
-            { charset: 'utf-8' },
+            { charset: 'UTF-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-            { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+            { hid: 'description', name: 'description', content: process.env.npm_package_description || '尝试新技术与JAVA配合' }
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+        ],
+        script: [
+            { charset: 'utf-8', href: 'https://rejiejay-1251940173.cos.ap-guangzhou.myqcloud.com/myweb/page-assets/js/jweixin-1.4.0.js' },
         ]
     },
     /*
