@@ -1,6 +1,7 @@
 <template>
     <div>
         <nuxt-link to="/login">登录页</nuxt-link>
+        <nuxt-link to="/login">登录页</nuxt-link>
     </div>
 </template>
 

@@ -8,8 +8,7 @@
 </template>
 
 <script>
-
-import axios from 'axios';
+import axios from "axios";
 
 export default {
   data: function data() {
@@ -34,6 +33,7 @@ export default {
      * 提交登录
      */
     async loginSubmit() {
+      let _this = this;
       let password = this.password;
       if (password.length < 6) {
         return alert("密码不能小于6位数");
@@ -47,6 +47,22 @@ export default {
           password: password
         }
       });
+
+      if (loginResult.status === 200) {
+        let replyBody = loginResult.data;
+        if (replyBody.result === 1) {
+          localStorage.setItem("x-rejiejay-authorization", replyBody.token);
+          localStorage.setItem(
+            "x-rejiejay-authorization-expired",
+            replyBody.tokenexpired
+          );
+          _this.$router.go(-1); // 返回上一页
+        } else {
+          alert(replyBody.message);
+        }
+      } else {
+        alert(loginResult.statusText);
+      }
 
       console.log(loginResult);
     }
